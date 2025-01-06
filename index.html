@@ -209,15 +209,33 @@
 
         <script>
             const visualSlider = new Swiper(".visual-slider", {
+                loop: true,
+                // 반복옵션
+                autoplay: true,
+                speed: 1000,
+                /* 기본값은 300ms */
+                // direction: "vertical",
+                /* 기본값은 horizontal */
+                //effect: "coverflow", //slide, fade, flip, cube, coverflow
+                centeredSlides: true, // 활성화된 슬라이드를 가운데로
+
+                //캐러셀
+                //slidesPerView: 2,
+                // 한번에 보여줄 슬라이드의 갯수
+                spaceBetween: 20,
+                // 사이 간격(px)
+
                 // If we need pagination
                 pagination: {
                     el: ".swiper-pagination",
+                    clickable: true, //클릭가능
+                    type: "fraction", //페이지네이션 숫자로 표시
                 },
 
                 // Navigation arrows
                 navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
+                    nextEl: ".btn-next",
+                    prevEl: ".btn-prev",
                 },
             });
         </script>
